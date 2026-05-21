@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#targetfinder-demo" class="md-skip">
+        <a href="#smart-cursor" class="md-skip">
           Skip to content
         </a>
       
@@ -258,10 +258,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-shown-here" class="md-nav__link">
+  <a href="#targetfinder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is shown here?
+        TargetFinder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bubble-cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bubble Cursor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynaspot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DynaSpot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ninja-cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ninja Cursor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-pointing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Pointing
       
     </span>
   </a>
@@ -395,10 +439,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-shown-here" class="md-nav__link">
+  <a href="#targetfinder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is shown here?
+        TargetFinder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bubble-cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bubble Cursor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynaspot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DynaSpot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ninja-cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ninja Cursor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-pointing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Pointing
       
     </span>
   </a>
@@ -433,20 +521,31 @@
 
 
 
-<h1 id="targetfinder-demo">TargetFinder Demo</h1>
-<p>This website presents short demonstrations of several target selection techniques developed around TargetFinder.</p>
-<p>The goal is to provide a simple public-facing demo page with videos, installation instructions, and runnable examples.</p>
-<h2 id="what-is-shown-here">What is shown here?</h2>
-<ul>
-<li>Target detection with TargetFinder</li>
-<li>Bubble Cursor</li>
-<li>DynaSpot</li>
-<li>Semantic Pointing</li>
-<li>Ninja Cursors</li>
-</ul>
+<h1 id="smart-cursor">Smart Cursor</h1>
+<p>Using YOLOv26 + PyQt to build system-wide target facilitation techniques. Credits: Xinqi Tang, Eva-Ly Jerome, Julien Gori. Built on <a href="https://github.com/AHMEDBENAKOUCHE/target_finder_toolkit">TargetFinder</a>.</p>
+<p>This page presents short demonstrations of several target selection techniques built around TargetFinder.</p>
+<h2 id="targetfinder">TargetFinder</h2>
+<p>TargetFinder detects interactive targets on the screen using a YOLO model and displays the corresponding bounding boxes. These detected targets are then used by the interaction techniques below.</p>
+<video controls width="100%" src="assets/videos/targetfinder.mp4"></video>
+
+<h2 id="bubble-cursor">Bubble Cursor</h2>
+<p>Bubble Cursor is an area cursor, whose area grows until reaching the closest target. This essentially makes targets larger. Original Bubble Cursor <a href="https://www.tovigrossman.com/papers/chi2005bubblecursor.pdf">paper</a>.</p>
+<video controls width="100%" src="assets/videos/bubblecursor.mp4"></video>
+
+<h2 id="dynaspot">DynaSpot</h2>
+<p>DynaSpot is an area cursor whose area grows depending on the instantaneous speed. Essentially, it is a Bubble Cursor where the area is modulated by speed. The motivation behind this technique is that more precise selection requires slowing down. Original DynaSpot <a href="https://doi.org/10.1145/1518701.1518911">paper</a>.</p>
+<video controls width="100%" src="assets/videos/dynaspot.mp4"></video>
+
+<h2 id="ninja-cursor">Ninja Cursor</h2>
+<p>Ninja Cursor is a technique where one moves not a single cursor but an array of cursors. The actual cursor is selected with gaze. The idea is to first aim “with the eyes”, and perform finer movements with the mouse. Original Ninja Cursor <a href="https://dl.acm.org/doi/pdf/10.1145/1357054.1357201">paper</a>.</p>
+<video controls width="100%" src="assets/videos/ninjacursors.mp4"></video>
+
+<h2 id="semantic-pointing">Semantic Pointing</h2>
+<p>Semantic Pointing is a technique which locally dissociates the mapping between physical mouse movements and virtual cursor movements. Concretely, this can make targets look sticky or, on the contrary, repulsive. Original Semantic Pointing <a href="https://doi.org/10.1145/985692.985758">paper</a>.</p>
+<video controls width="100%" src="assets/videos/semanticpointing.mp4"></video>
+
 <h2 id="link-with-targetfinder">Link with TargetFinder</h2>
-<p>This demo project does not duplicate the source code of TargetFinder.</p>
-<p>Instead, it explicitly imports <code>target-finder-toolkit</code> as a dependency. This keeps the demo connected to the main toolkit, so improvements in the main project can be reused by this demo repository.</p>
+<p>This demo project does not duplicate the source code of TargetFinder. Instead, it explicitly imports <code>target-finder-toolkit</code> as a dependency. This keeps the demo connected to the main toolkit, so improvements in the main project can be reused by this demo repository.</p>
 
 
 

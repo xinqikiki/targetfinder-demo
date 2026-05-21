@@ -331,10 +331,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ninja-cursors" class="md-nav__link">
+  <a href="#ninja-cursor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ninja Cursors
+        Ninja Cursor
       
     </span>
   </a>
@@ -485,10 +485,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ninja-cursors" class="md-nav__link">
+  <a href="#ninja-cursor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ninja Cursors
+        Ninja Cursor
       
     </span>
   </a>
@@ -524,16 +524,21 @@
 
 
 <h1 id="techniques">Techniques</h1>
+<p>The techniques demonstrated here are implemented as system-wide target facilitation tools built around <a href="https://github.com/AHMEDBENAKOUCHE/target_finder_toolkit">TargetFinder</a>.</p>
 <h2 id="targetfinder">TargetFinder</h2>
-<p>TargetFinder detects interactive targets on the screen and displays their bounding boxes.</p>
+<p>TargetFinder uses YOLOv26 + PyQt to detect interactive targets on the screen and display their bounding boxes. The detected targets can then be used by target-aware pointing techniques.</p>
 <h2 id="bubble-cursor">Bubble Cursor</h2>
-<p>Bubble Cursor expands the effective selection area around the nearest target. The user can click even if the pointer is not exactly inside the target, as long as the bubble selects it.</p>
+<p>Bubble Cursor is an area cursor whose area grows until reaching the closest target. This makes targets effectively larger and allows the user to select a target without placing the pointer exactly inside it.</p>
+<p>Reference: <a href="https://www.tovigrossman.com/papers/chi2005bubblecursor.pdf">The Bubble Cursor: Enhancing Target Acquisition by Dynamic Resizing of the Cursor's Activation Area</a></p>
 <h2 id="dynaspot">DynaSpot</h2>
-<p>DynaSpot dynamically changes the activation area around the pointer according to movement speed. The spot grows during fast movement and shrinks when the pointer slows down.</p>
+<p>DynaSpot is an area cursor whose area grows depending on instantaneous pointer speed. It behaves like a Bubble Cursor modulated by speed: the activation area expands during fast movement and shrinks when the pointer slows down, because precise selection usually requires slower motion.</p>
+<p>Reference: <a href="https://doi.org/10.1145/1518701.1518911">DynaSpot: Speed-Dependent Area Cursor</a></p>
 <h2 id="semantic-pointing">Semantic Pointing</h2>
-<p>Semantic Pointing modifies pointer behavior near detected targets to make selection easier.</p>
-<h2 id="ninja-cursors">Ninja Cursors</h2>
-<p>Ninja Cursors uses gaze to select one cursor among eight distributed cursors. The selected cursor can then be used to click the intended target.</p>
+<p>Semantic Pointing locally dissociates the mapping between physical mouse movements and virtual cursor movements. This changes the control-display ratio near targets, making some targets feel sticky or, on the contrary, repulsive.</p>
+<p>Reference: <a href="https://doi.org/10.1145/985692.985758">Semantic Pointing: Improving Target Acquisition with Control-Display Ratio Adaptation</a></p>
+<h2 id="ninja-cursor">Ninja Cursor</h2>
+<p>Ninja Cursor uses several distributed cursors instead of a single cursor. In this implementation, gaze is used to select the active cursor: the user first aims with the eyes, then performs finer movements with the mouse.</p>
+<p>Reference: <a href="https://dl.acm.org/doi/pdf/10.1145/1357054.1357201">Ninja Cursors: Using Multiple Cursors to Assist Target Acquisition on Large Screens</a></p>
 <h2 id="platform-support">Platform Support</h2>
 <p>The code includes platform-specific handling for macOS, Windows, and Linux/X11.</p>
 <ul>
