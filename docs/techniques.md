@@ -22,7 +22,6 @@ Reference: [DynaSpot: Speed-Dependent Area Cursor](https://doi.org/10.1145/15187
 
 Semantic Pointing locally dissociates the mapping between physical mouse movements and virtual cursor movements. This changes the control-display ratio near targets, making some targets feel sticky or, on the contrary, repulsive.
 
-Reference: [Semantic Pointing: Improving Target Acquisition with Control-Display Ratio Adaptation](https://doi.org/10.1145/985692.985758)
 
 ## Ninja Cursor
 

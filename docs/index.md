@@ -30,7 +30,7 @@ Ninja Cursor is a technique where one moves not a single cursor but an array of 
 
 ## Semantic Pointing
 
-Semantic Pointing is a technique which locally dissociates the mapping between physical mouse movements and virtual cursor movements. Concretely, this can make targets look sticky or, on the contrary, repulsive. Original Semantic Pointing [paper](https://doi.org/10.1145/985692.985758).
+Semantic Pointing is a technique which locally dissociates the mapping between physical mouse movements and virtual cursor movements. Concretely, this can make targets look sticky or, on the contrary, repulsive.
 
 <video controls width="100%" src="assets/videos/semanticpointing.mp4"></video>
 
