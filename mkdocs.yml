@@ -1,0 +1,17 @@
+site_name: TargetFinder Demo
+site_description: Demo website for TargetFinder-based target selection techniques
+site_author: Xinqi Tang
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Techniques: techniques.md
+  - Installation: installation.md
+  - Videos: videos.md
