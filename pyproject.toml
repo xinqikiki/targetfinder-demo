@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Demo website and runnable examples for TargetFinder interaction techniques"
 requires-python = ">=3.10"
 dependencies = [
-  "target-finder-toolkit @ git+https://github.com/AHMEDBENAKOUCHE/target_finder_toolkit.git@xinqi"
+  "target-finder-toolkit[gaze] @ git+https://github.com/AHMEDBENAKOUCHE/target_finder_toolkit.git@xinqi"
 ]
 
 [project.optional-dependencies]

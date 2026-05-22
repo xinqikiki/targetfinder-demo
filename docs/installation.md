@@ -40,7 +40,9 @@ python -m pip install --upgrade pip
 pip install -e .
 ```
 
-This installs `target-finder-toolkit` from the main TargetFinder repository. The demo repository does not duplicate the toolkit code.
+This installs `target-finder-toolkit[gaze]` from the main TargetFinder repository. The demo repository does not duplicate the toolkit code.
+
+The default demo installation includes the dependencies needed by the gaze-based Ninja Cursors technique, including `webeyetrack`, `tensorflow`, and `mediapipe`. This makes the installation heavier, but allows all demo examples to run from the same environment.
 
 ## Run the examples
 
@@ -74,7 +76,7 @@ python examples/run_semantic.py
 python examples/run_ninja.py
 ```
 
-Ninja Cursors requires a webcam and may need camera permission before it can track gaze.
+Ninja Cursors requires a webcam and may need camera permission before it can track gaze. On first run, model weights may be downloaded or initialized depending on the main toolkit configuration.
 
 ## Notes
 
