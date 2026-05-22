@@ -729,7 +729,8 @@ python -m pip install --upgrade pip
 <h2 id="install-the-demo-dependencies">Install the demo dependencies</h2>
 <pre><code class="language-bash">pip install -e .
 </code></pre>
-<p>This installs <code>target-finder-toolkit</code> from the main TargetFinder repository. The demo repository does not duplicate the toolkit code.</p>
+<p>This installs <code>target-finder-toolkit[gaze]</code> from the main TargetFinder repository. The demo repository does not duplicate the toolkit code.</p>
+<p>The default demo installation includes the dependencies needed by the gaze-based Ninja Cursors technique, including <code>webeyetrack</code>, <code>tensorflow</code>, and <code>mediapipe</code>. This makes the installation heavier, but allows all demo examples to run from the same environment.</p>
 <h2 id="run-the-examples">Run the examples</h2>
 <h3 id="targetfinder">TargetFinder</h3>
 <pre><code class="language-bash">python examples/run_targetfinder.py
@@ -746,7 +747,7 @@ python -m pip install --upgrade pip
 <h3 id="ninja-cursors">Ninja Cursors</h3>
 <pre><code class="language-bash">python examples/run_ninja.py
 </code></pre>
-<p>Ninja Cursors requires a webcam and may need camera permission before it can track gaze.</p>
+<p>Ninja Cursors requires a webcam and may need camera permission before it can track gaze. On first run, model weights may be downloaded or initialized depending on the main toolkit configuration.</p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>On macOS, allow Terminal or your Python app in Accessibility and Input Monitoring if cursor control or click redirection does not work.</li>
